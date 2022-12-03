@@ -84,10 +84,10 @@ def main():
                 labels = results.xyxyn[0][:, -1].numpy()
                 st.image(img)
                 for i in labels:
-                    if i ==0:
-                        a.append(labels[1])
+                    if lebels[i] == 1:
+                        a.append(labels[i])
                     else:
-                        b.append(labels[0])
+                        b.append(labels[i])
                 st.success("Found {} faces".format(np.size(a))
                 st.success("Found {} faces".format(np.size(b))
 
