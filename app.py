@@ -81,7 +81,7 @@ def main():
                 img = np.squeeze(results.render())
                 a= results.pandas().xyxy[0].value_counts('name')               
                  # count_rectangle = np.size(labels)
-                st.text(labels)
+                # st.text(labels)
                 st.image(img)
                 # for i in labels:
                 #     st.text(labels[i])
