@@ -77,18 +77,15 @@ def main():
         if st.button('Process'):
             if feature_choice == "Kecambah":
                 # frame = cv2.cvtColor(our_image)
-                a=[]
-                b=[]
                 results = model(our_image)
                 img = np.squeeze(results.render())
-#                 labels = results.xyxyn[0][:, -1].numpy()
+                a= results.pandas().xyxy[0].value_counts('name')               
+                 # count_rectangle = np.size(labels)
+                st.text(labels)
                 st.image(img)
-#                 for i in labels:
-#                     if lebels[i] == 1:
-#                         a.append(labels[i])
-#                     else:
-#                         b.append(labels[i])
-#                 st.success("Found {} faces".format(np.size(a))
+                # for i in labels:
+                #     st.text(labels[i])
+                st.success("Found {} faces".format(a))
 
     elif choice == "About":
         st.subheader("About me")
