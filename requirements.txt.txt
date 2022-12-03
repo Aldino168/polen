@@ -1,0 +1,16 @@
+streamlit
+opencv-python
+torch>=1.7.0
+torchvision>=0.8.1
+matplotlib
+numpy
+Pillow
+PyYAML
+requests
+scipy
+tqdm
+pandas
+seaborn
+ipython
+psutil
+thop
