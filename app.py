@@ -79,8 +79,9 @@ def main():
                 # frame = cv2.cvtColor(our_image)
                 results = model(our_image)
                 img = np.squeeze(results.render())
+                labels = results.xyxyn[0][:, -1].numpy()
                 st.image(img)
-                # st.success("Found {} faces".format(len(result_faces)))
+                st.success("Found {} faces".format(labels))
 
     elif choice == "About":
         st.subheader("About me")
