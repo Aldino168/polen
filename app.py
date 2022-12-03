@@ -88,8 +88,8 @@ def main():
                         a.append(labels[i])
                     else:
                         b.append(labels[i])
-                st.success("Found {} faces".format(np.size(a))
-                st.success("Found {} faces".format(np.size(b))
+                st.success("Found {}{} faces".format(np.size(a), np.size(b))
+#                 st.success("Found {} faces".format(np.size(b))
 
     elif choice == "About":
         st.subheader("About me")
