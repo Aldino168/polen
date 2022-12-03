@@ -91,8 +91,8 @@ def main():
                 st.success("Found {}{} faces".format(np.size(a), np.size(b))
 #                 st.success("Found {} faces".format(np.size(b))
 
-    elif choice == "About":
-        st.subheader("About me")
+#     elif choice == "About":
+#         st.subheader("About me")
 
 if __name__ == '__main__':
     main()
