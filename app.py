@@ -77,11 +77,19 @@ def main():
         if st.button('Process'):
             if feature_choice == "Kecambah":
                 # frame = cv2.cvtColor(our_image)
+                a=[]
+                b=[]
                 results = model(our_image)
                 img = np.squeeze(results.render())
                 labels = results.xyxyn[0][:, -1].numpy()
                 st.image(img)
-                st.success("Found {} faces".format(labels))
+                for i in labels:
+                    if i ==0:
+                        a.append(labels[1])
+                    else:
+                        b.append(labels[0])
+                st.success("Found {} faces".format(np.size(a))
+                st.success("Found {} faces".format(np.size(b))
 
     elif choice == "About":
         st.subheader("About me")
