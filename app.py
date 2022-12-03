@@ -81,14 +81,14 @@ def main():
                 b=[]
                 results = model(our_image)
                 img = np.squeeze(results.render())
-                labels = results.xyxyn[0][:, -1].numpy()
+#                 labels = results.xyxyn[0][:, -1].numpy()
                 st.image(img)
-                for i in labels:
-                    if lebels[i] == 1:
-                        a.append(labels[i])
-                    else:
-                        b.append(labels[i])
-                st.success("Found {} faces".format(np.size(a))
+#                 for i in labels:
+#                     if lebels[i] == 1:
+#                         a.append(labels[i])
+#                     else:
+#                         b.append(labels[i])
+#                 st.success("Found {} faces".format(np.size(a))
 
     elif choice == "About":
         st.subheader("About me")
